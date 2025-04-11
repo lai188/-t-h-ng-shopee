@@ -1,0 +1,103 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="function.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+</head>
+    <body style="padding-left: 10px; padding-right: 10px;">
+        <div style="padding-top: 15px;">
+            <button type="submit" style="width: 49%; font-size: 15px; font-weight: bold; background-color: #fe5723; height: 40px" class="btn btn-primary" onclick="createJavascript()">
+                <img src="https://finatech.s3.ap-southeast-1.amazonaws.com/20220929/18598389/Shopee.jpg" style="margin-bottom: 6px" width="28px" /><span>TẠO SCRIPT</span>
+            </button>
+            <button type="submit" style="width: 49%; font-size: 15px; font-weight: bold; background-color: #04AA6D;; height: 40px" class="btn btn-primary" onclick="listLink()">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/014/441/438/small_2x/list-icon-3d-design-for-application-and-website-presentation-png.png" style="margin-bottom: 2px; margin-right: 2px;" width="30px" /><span>LIST CÓ SẴN</span>
+            </button>
+        </div>
+        <div style="justify-content: center; padding-top: 10px">
+        <span id="title" style="font-weight: bold; font-size: 19px;">Link sản phẩm dài:</span>
+        <br>
+        <textarea id="productLink" style="margin-bottom: 12px;"></textarea>
+        <div id="selectList" style="display: none;">
+            <select id ="selectedItem" style="width: 100%; font-size: 15px; height: 30px">
+                <option value="0">--Chọn sản phẩm--</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A848738314%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A27069665259%2C%22modelid%22%3A223545887363%2C%22quantity%22%3A" style="color: #da3232;">Skull Noel OFFICIAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A848738314%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A25123620593%2C%22modelid%22%3A222676694388%2C%22quantity%22%3A" style="color: #878383;">Cúc nhỏ OFFICIAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A848738314%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A28212254597%2C%22modelid%22%3A197832478596%2C%22quantity%22%3A" style="color: #ff8000;">Bí OFFICIAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A1018372499%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A27012678264%2C%22modelid%22%3A215426921585%2C%22quantity%22%3A" style="color: #ff8000;">Bí LOCAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A848738314%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A25536582862%2C%22modelid%22%3A197844150932%2C%22quantity%22%3A" style="color: #ca03fc;">Tím nhỏ OFFICIAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A1018372499%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A27315382438%2C%22modelid%22%3A233371590575%2C%22quantity%22%3A" style="color: #ca03fc;">Tím nhỏ LOCAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A848738314%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A27112689498%2C%22modelid%22%3A223273178515%2C%22quantity%22%3A" style="color: #b50ddf;">Tím lớn OFFICIAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A1018372499%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A28315382859%2C%22modelid%22%3A223371686727%2C%22quantity%22%3A" style="color: #b50ddf;">Tím lớn LOCAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A1018372499%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A29307360599%2C%22modelid%22%3A147410327440%2C%22quantity%22%3A" style="color: #a7bbcf;">Set V1 LOCAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A1018372499%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A29757358989%2C%22modelid%22%3A207708320944%2C%22quantity%22%3A" style="color: #fed58a;">Set V2 LOCAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A1018372499%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A27819678909%2C%22modelid%22%3A247181209062%2C%22quantity%22%3A" style="color: #fc0fc0;">Set Cry mới LOCAL</option>
+            </select>       
+        </div>     
+        <div style="padding-bottom: 12px; font-size: 15px;">
+        <span style="font-weight: bold; font-size: 19px;">Số lượng:</span>
+        <input type="number" id="quantity"  min="1" max="99"  style="max-width: 15%;">
+        <span>(Không nhập mặc định là 1)</span>
+        </div>
+        <div style="width: 100%; padding-top: 10px; text-align: center">
+        <button id="changeList" type="submit" style="width: 49%; font-size: 15px; font-weight: bold" class="btn btn-primary" onclick="changeLink()">CHUYỂN ĐỔI</button>
+        <button id="changeItem" type="submit" style="width: 49%; font-size: 15px; font-weight: bold; display: none;" class="btn btn-primary" onclick="changeItem()">CHUYỂN ĐỔI</button>
+        <button type="submit" style="width: 49%; font-size: 15px; font-weight: bold" class="btn btn-danger" onclick="reset()">RESET</button>
+    </div>
+        <div style="padding-top: 3%;">
+            <span id="result" style="font-weight: bold; font-size: 19px;">Javascript/Link:</span>
+        </div>
+        <textarea id="finalLink"readonly></textarea>
+        <p id="thongbaoLink" style="color: red; font-weight: bold; text-align: center; max-height:2%;">&nbsp;</p>
+        <button style="width: 100%; font-size: 15px; font-weight: bold; background-color: #ca03fc" class="btn btn-success" onclick="copyLink()">COPY</button>
+        
+        <div style="margin-top: 30px;"><a  href="https://docs.google.com/document/d/1c1vskJ9Kv6ySI351MlwsFqE0eZFGKf2J/edit?usp=sharing&ouid=111561116415802237074&rtpof=true&sd=true"><button style="width: 100%; font-size: 15px; font-weight: bold; background-color: #fe5723" class="btn btn-success">TÀI LIỆU ĐẶC TẢ</button></a>
+        </div>
+        <div style="padding-top: 3%;">
+            <span id="result" style="font-weight: bold; font-size: 19px;">Hướng dẫn tạo link dài:</span>
+        </div>
+        <div style="text-align: center;">
+            <video controls width="250">            
+                <source src="asset/Huong-dan-tao-link-dai.mp4" type="video/mp4" />
+              </video>
+        </div>
+        <div style="padding-top: 3%;">
+            <span id="result" style="font-weight: bold; font-size: 19px;">Hướng dẫn chạy script:</span>
+        </div>
+        <div style="text-align: center;">
+            <video controls width="250">            
+                <source src="asset/Huong-dan-chay-script.mp4" type="video/mp4" />
+              </video>
+        </div>
+    </body>
+    <style>
+        textarea
+        {
+            width: 100%;
+            height: 150px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            resize: none;
+        }
+    </style>
+    <script>
+        var inputBox = document.getElementById("quantity");
+        var invalidChars = [
+        "-",
+        "+",
+        "e",
+        ];
+        inputBox.addEventListener("keydown", function(e) {
+        if (invalidChars.includes(e.key)) {
+        e.preventDefault();}});
+        inputBox.oninput = function () {
+            if (this.value > 999) {
+                this.value = 999; 
+            }
+        }
+    </script>
